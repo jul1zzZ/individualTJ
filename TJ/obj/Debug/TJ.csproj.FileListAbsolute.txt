@@ -1,0 +1,72 @@
+C:\Users\witless\source\repos\TJ\TJ\bin\Debug\TJ.exe.config
+C:\Users\witless\source\repos\TJ\TJ\bin\Debug\TJ.exe
+C:\Users\witless\source\repos\TJ\TJ\bin\Debug\TJ.pdb
+C:\Users\witless\source\repos\TJ\TJ\bin\Debug\EntityFramework.dll
+C:\Users\witless\source\repos\TJ\TJ\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\witless\source\repos\TJ\TJ\bin\Debug\EntityFramework.xml
+C:\Users\witless\source\repos\TJ\TJ\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\witless\source\repos\TJ\TJ\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\TJ.csproj.AssemblyReference.cache
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\LoginWindow.g.cs
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\MainWindow.g.cs
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\App.g.cs
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\TJ_Content.g.cs
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\TJ_MarkupCompile.cache
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\TJ_MarkupCompile.lref
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\App.baml
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\LoginWindow.baml
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\MainWindow.baml
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\TJ.g.resources
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\TJ.Properties.Resources.resources
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\TJ.csproj.GenerateResource.cache
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\TJ.csproj.CoreCompileInputs.cache
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\TJ.csproj.CopyComplete
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\TJ.exe
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\TJ.pdb
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\ShoesInfoPage.g.cs
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\ShoList.g.cs
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\ShoesInfoPage.baml
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\ShoList.baml
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\ShoesListPage.g.cs
+C:\Users\witless\source\repos\TJ\TJ\obj\Debug\ShoesListPage.baml
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\TJ.exe.config
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\TJ.exe
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\TJ.pdb
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\EntityFramework.dll
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\EntityFramework.xml
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\TJ.csproj.AssemblyReference.cache
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\TJ.csproj.SuggestedBindingRedirects.cache
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\LoginWindow.g.cs
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\MainWindow.g.cs
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\ShoesInfoPage.g.cs
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\ShoesListPage.g.cs
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\ShoList.g.cs
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\App.g.cs
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\TJ_Content.g.cs
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\TJ_MarkupCompile.cache
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\TJ_MarkupCompile.lref
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\App.baml
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\LoginWindow.baml
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\MainWindow.baml
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\ShoesInfoPage.baml
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\ShoesListPage.baml
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\ShoList.baml
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\TJ.g.resources
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\TJ.Properties.Resources.resources
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\TJ.csproj.GenerateResource.cache
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\TJ.csproj.CoreCompileInputs.cache
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\TJ.csproj.CopyComplete
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\TJ.exe
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\obj\Debug\TJ.pdb
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\MaterialDesignColors.dll
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\MaterialDesignColors.pdb
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\jusep\OneDrive\Рабочий стол\TJ\TJ\bin\Debug\ru\EntityFramework.SqlServer.resources.dll

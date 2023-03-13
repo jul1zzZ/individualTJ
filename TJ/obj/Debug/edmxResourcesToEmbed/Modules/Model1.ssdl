@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище TjCollectionModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Auth">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="ColorID" />
+    </Key>
+    <Property Name="ColorID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Material">
+    <Key>
+      <PropertyRef Name="MaterialID" />
+    </Key>
+    <Property Name="MaterialID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Season">
+    <Key>
+      <PropertyRef Name="SeasonID" />
+    </Key>
+    <Property Name="SeasonID" Type="int" Nullable="false" />
+    <Property Name="SeasonName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ShoeType">
+    <Key>
+      <PropertyRef Name="ShoesTypeID" />
+    </Key>
+    <Property Name="ShoesTypeID" Type="int" Nullable="false" />
+    <Property Name="ShoesType" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Shoos">
+    <Key>
+      <PropertyRef Name="ShoosID" />
+    </Key>
+    <Property Name="ShoosID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShoesTypeID" Type="int" Nullable="false" />
+    <Property Name="Article" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SizeID" Type="int" Nullable="false" />
+    <Property Name="SeasonID" Type="int" Nullable="false" />
+    <Property Name="ColorID" Type="int" Nullable="false" />
+    <Property Name="MaterialID" Type="int" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ShoosName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Size">
+    <Key>
+      <PropertyRef Name="SizeID" />
+    </Key>
+    <Property Name="SizeID" Type="int" Nullable="false" />
+    <Property Name="SizeName" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Auth_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="Auth" Type="Self.Auth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Auth">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shoos_Color">
+    <End Role="Color" Type="Self.Color" Multiplicity="1" />
+    <End Role="Shoos" Type="Self.Shoos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Color">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="Shoos">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shoos_Material">
+    <End Role="Material" Type="Self.Material" Multiplicity="1" />
+    <End Role="Shoos" Type="Self.Shoos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material">
+        <PropertyRef Name="MaterialID" />
+      </Principal>
+      <Dependent Role="Shoos">
+        <PropertyRef Name="MaterialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shoos_Season">
+    <End Role="Season" Type="Self.Season" Multiplicity="1" />
+    <End Role="Shoos" Type="Self.Shoos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Season">
+        <PropertyRef Name="SeasonID" />
+      </Principal>
+      <Dependent Role="Shoos">
+        <PropertyRef Name="SeasonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shoos_ShoeType">
+    <End Role="ShoeType" Type="Self.ShoeType" Multiplicity="1" />
+    <End Role="Shoos" Type="Self.Shoos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShoeType">
+        <PropertyRef Name="ShoesTypeID" />
+      </Principal>
+      <Dependent Role="Shoos">
+        <PropertyRef Name="ShoesTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shoos_Size">
+    <End Role="Size" Type="Self.Size" Multiplicity="1" />
+    <End Role="Shoos" Type="Self.Shoos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Size">
+        <PropertyRef Name="SizeID" />
+      </Principal>
+      <Dependent Role="Shoos">
+        <PropertyRef Name="SizeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище TjCollectionModelContainer">
+    <EntitySet Name="Auth" EntityType="Self.Auth" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Color" EntityType="Self.Color" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Material" EntityType="Self.Material" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Season" EntityType="Self.Season" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShoeType" EntityType="Self.ShoeType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Shoos" EntityType="Self.Shoos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Size" EntityType="Self.Size" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Auth_Role" Association="Self.FK_Auth_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="Auth" EntitySet="Auth" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shoos_Color" Association="Self.FK_Shoos_Color">
+      <End Role="Color" EntitySet="Color" />
+      <End Role="Shoos" EntitySet="Shoos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shoos_Material" Association="Self.FK_Shoos_Material">
+      <End Role="Material" EntitySet="Material" />
+      <End Role="Shoos" EntitySet="Shoos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shoos_Season" Association="Self.FK_Shoos_Season">
+      <End Role="Season" EntitySet="Season" />
+      <End Role="Shoos" EntitySet="Shoos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shoos_ShoeType" Association="Self.FK_Shoos_ShoeType">
+      <End Role="ShoeType" EntitySet="ShoeType" />
+      <End Role="Shoos" EntitySet="Shoos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shoos_Size" Association="Self.FK_Shoos_Size">
+      <End Role="Size" EntitySet="Size" />
+      <End Role="Shoos" EntitySet="Shoos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

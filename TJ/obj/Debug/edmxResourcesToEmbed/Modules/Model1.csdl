@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TjCollectionModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Auth">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_Auth_Role" FromRole="Auth" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="ColorID" />
+    </Key>
+    <Property Name="ColorID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Shoos" Relationship="Self.FK_Shoos_Color" FromRole="Color" ToRole="Shoos" />
+  </EntityType>
+  <EntityType Name="Material">
+    <Key>
+      <PropertyRef Name="MaterialID" />
+    </Key>
+    <Property Name="MaterialID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Shoos" Relationship="Self.FK_Shoos_Material" FromRole="Material" ToRole="Shoos" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Auths" Relationship="Self.FK_Auth_Role" FromRole="Role" ToRole="Auth" />
+  </EntityType>
+  <EntityType Name="Season">
+    <Key>
+      <PropertyRef Name="SeasonID" />
+    </Key>
+    <Property Name="SeasonID" Type="Int32" Nullable="false" />
+    <Property Name="SeasonName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Shoos" Relationship="Self.FK_Shoos_Season" FromRole="Season" ToRole="Shoos" />
+  </EntityType>
+  <EntityType Name="ShoeType">
+    <Key>
+      <PropertyRef Name="ShoesTypeID" />
+    </Key>
+    <Property Name="ShoesTypeID" Type="Int32" Nullable="false" />
+    <Property Name="ShoesType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Shoos" Relationship="Self.FK_Shoos_ShoeType" FromRole="ShoeType" ToRole="Shoos" />
+  </EntityType>
+  <EntityType Name="Shoo">
+    <Key>
+      <PropertyRef Name="ShoosID" />
+    </Key>
+    <Property Name="ShoosID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ShoesTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Article" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SizeID" Type="Int32" Nullable="false" />
+    <Property Name="SeasonID" Type="Int32" Nullable="false" />
+    <Property Name="ColorID" Type="Int32" Nullable="false" />
+    <Property Name="MaterialID" Type="Int32" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ShoosName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Color" Relationship="Self.FK_Shoos_Color" FromRole="Shoos" ToRole="Color" />
+    <NavigationProperty Name="Material" Relationship="Self.FK_Shoos_Material" FromRole="Shoos" ToRole="Material" />
+    <NavigationProperty Name="Season" Relationship="Self.FK_Shoos_Season" FromRole="Shoos" ToRole="Season" />
+    <NavigationProperty Name="ShoeType" Relationship="Self.FK_Shoos_ShoeType" FromRole="Shoos" ToRole="ShoeType" />
+    <NavigationProperty Name="Size" Relationship="Self.FK_Shoos_Size" FromRole="Shoos" ToRole="Size" />
+  </EntityType>
+  <EntityType Name="Size">
+    <Key>
+      <PropertyRef Name="SizeID" />
+    </Key>
+    <Property Name="SizeID" Type="Int32" Nullable="false" />
+    <Property Name="SizeName" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Shoos" Relationship="Self.FK_Shoos_Size" FromRole="Size" ToRole="Shoos" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Auth_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="Auth" Type="Self.Auth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Auth">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shoos_Color">
+    <End Role="Color" Type="Self.Color" Multiplicity="1" />
+    <End Role="Shoos" Type="Self.Shoo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Color">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="Shoos">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shoos_Material">
+    <End Role="Material" Type="Self.Material" Multiplicity="1" />
+    <End Role="Shoos" Type="Self.Shoo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material">
+        <PropertyRef Name="MaterialID" />
+      </Principal>
+      <Dependent Role="Shoos">
+        <PropertyRef Name="MaterialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shoos_Season">
+    <End Role="Season" Type="Self.Season" Multiplicity="1" />
+    <End Role="Shoos" Type="Self.Shoo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Season">
+        <PropertyRef Name="SeasonID" />
+      </Principal>
+      <Dependent Role="Shoos">
+        <PropertyRef Name="SeasonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shoos_ShoeType">
+    <End Role="ShoeType" Type="Self.ShoeType" Multiplicity="1" />
+    <End Role="Shoos" Type="Self.Shoo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShoeType">
+        <PropertyRef Name="ShoesTypeID" />
+      </Principal>
+      <Dependent Role="Shoos">
+        <PropertyRef Name="ShoesTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shoos_Size">
+    <End Role="Size" Type="Self.Size" Multiplicity="1" />
+    <End Role="Shoos" Type="Self.Shoo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Size">
+        <PropertyRef Name="SizeID" />
+      </Principal>
+      <Dependent Role="Shoos">
+        <PropertyRef Name="SizeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TjCollectionEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Auths" EntityType="Self.Auth" />
+    <EntitySet Name="Colors" EntityType="Self.Color" />
+    <EntitySet Name="Materials" EntityType="Self.Material" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="Seasons" EntityType="Self.Season" />
+    <EntitySet Name="ShoeTypes" EntityType="Self.ShoeType" />
+    <EntitySet Name="Shoos" EntityType="Self.Shoo" />
+    <EntitySet Name="Sizes" EntityType="Self.Size" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_Auth_Role" Association="Self.FK_Auth_Role">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="Auth" EntitySet="Auths" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shoos_Color" Association="Self.FK_Shoos_Color">
+      <End Role="Color" EntitySet="Colors" />
+      <End Role="Shoos" EntitySet="Shoos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shoos_Material" Association="Self.FK_Shoos_Material">
+      <End Role="Material" EntitySet="Materials" />
+      <End Role="Shoos" EntitySet="Shoos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shoos_Season" Association="Self.FK_Shoos_Season">
+      <End Role="Season" EntitySet="Seasons" />
+      <End Role="Shoos" EntitySet="Shoos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shoos_ShoeType" Association="Self.FK_Shoos_ShoeType">
+      <End Role="ShoeType" EntitySet="ShoeTypes" />
+      <End Role="Shoos" EntitySet="Shoos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shoos_Size" Association="Self.FK_Shoos_Size">
+      <End Role="Size" EntitySet="Sizes" />
+      <End Role="Shoos" EntitySet="Shoos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
